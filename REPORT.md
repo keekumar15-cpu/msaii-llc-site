@@ -39,6 +39,7 @@ Live Vercel deploy: NOT DONE - not asked for. The member imports the repository 
 4. On a very tall browser window the hero stretched to the full window height and looked wrong. Fixed by capping it: `min-height: min(calc(100svh - 70px), 880px)`.
 5. The booking button fell below the first screen at 1440x900. Fixed by reducing the headline to `clamp(2.1rem, 3.6vw, 3.25rem)` and shortening the line under it to one line, which is what requirement 3 asks for.
 6. A mobile screenshot looked cut off to the right. I measured it instead of guessing: DevTools emulation at 390px reported `scrollWidth: 390, offenders: []`, i.e. no overflow. The cut was an artefact of `--window-size` below Chrome's minimum window width, not a page fault. The DevTools-emulated phone screenshot is the accurate one.
+7. On a wide screen the hero text and the photo overlapped. Cause: the hero grid was still inside the centred `.wrap`, and `.hero-copy` then added a second left padding of `(100vw - 1160px)/2`. At 1920px those two offset each other, the text column was squeezed to about 36px, the headline words overflowed to the right, and the opaque photo painted over them. Fixed by removing the inner `.wrap`, setting the columns to `minmax(0,1fr) minmax(0,1.5fr)`, capping that left padding at 380px, adding `overflow-wrap: break-word` as a safety net, and stacking the hero at `max-width: 1023px`. The photo now runs edge to edge on the right at 60% of the screen.
 
 ## Claims ledger
 
@@ -48,6 +49,8 @@ Live Vercel deploy: NOT DONE - not asked for. The member imports the repository 
 | Every picture resolves | `Invoke-WebRequest -Method Head` on all 11 `src` values | all `HTTP 200 image/jpeg` |
 | No sideways scroll on a phone | CDP `Emulation.setDeviceMetricsOverride` width 390 | `{"scrollWidth":390,"innerWidth":390,"offenders":[]}` |
 | No sideways scroll on a laptop | CDP width 1440 | `{"scrollWidth":1440,"innerWidth":1440}` |
+| No sideways scroll on a wide screen | CDP width 1920 | `{"scrollWidth":1920,"innerWidth":1920}`; hero `h1 380..714`, `photo 762..1905`, headline overflow `0` |
+| Hero text never overlapped by the photo | CDP measure at 2560, 2200, 1920, 1680, 1536, 1440, 1366, 1280, 1100, 1024 | `h1.scrollWidth-clientWidth = 0` and `h1.right < photo.left` at every width |
 | Three service cards, three steps | CDP DOM query | `servicesCards:3`, `steps:3` |
 | Missing picture keeps the words | rename `working.jpeg`, CDP DOM query | `hiddenImages:["images/working.jpeg"]`, `aboutHeading:"Why I started MSAII LLC"`, `aboutParagraphs:2` |
 | Business name exact | regex over the file | 24 occurrences, all `MSAII LLC` |
