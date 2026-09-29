@@ -34,6 +34,9 @@ Live Vercel deploy: NOT DONE - not asked for. The member imports the repository 
 Free one-page self-audit (`monthly-numbers-audit.html`): DONE
   evidence: Chrome `--print-to-pdf` on the file -> page count from the PDF is `1` (`168713 bytes`); content height 9.42in of the 10in usable on US Letter. The logo is embedded as a data URI (`external image refs: 0`, `page bytes: 27270`), the name and email are filled in, and it needs no other file to open or publish.
 
+Free audit linked from the website: DONE
+  evidence: four links on the home page (nav, under the hero buttons, contact section, footer); CDP reports `freeLinks: 4`, `headerOverflow: 0` at 1440/1366/1280/1100/1024/900/390, and `ctaAboveFold: true` at every width; `http://localhost:4173/monthly-numbers-audit.html` -> `HTTP 200 bytes=27270`.
+
 DNS for msaii.cloud: DONE (information only)
   evidence: `Resolve-DnsName` on `msaii.cloud`, `www.msaii.cloud`, `automation.msaii.cloud` -> apex A `147.79.72.0, 145.223.124.186`; `www` CNAME `www.msaii.cloud.cdn.hstgr.net`; `automation` A `76.13.23.117`; nameservers `orbit.dns-parking.com`, `horizon.dns-parking.com` (Hostinger).
 
