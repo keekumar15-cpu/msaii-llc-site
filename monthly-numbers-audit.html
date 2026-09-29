@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Monthly Numbers Self-Audit - MSAII LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#17181C;
+    --orange:#E4572E;
+    --blue:#12355B;
+    --cream:#FAF3E7;
+    --line:rgba(23,24,28,0.18);
+  }
+  @page{ size:letter; margin:0.5in; }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:#FFFFFF;
+    color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+    font-size:10pt;
+    line-height:1.32;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{max-width:7.5in;margin:0 auto;padding:20px 0}
+  .brand{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:darken}
+  .brand span{font-family:"Archivo","Inter",Arial,sans-serif;font-weight:800;font-size:12pt;letter-spacing:-0.01em}
+  h1{
+    font-family:"Archivo","Inter",Arial,sans-serif;
+    font-weight:800;
+    font-size:17pt;
+    line-height:1.07;
+    letter-spacing:-0.02em;
+    margin:0 0 5px;
+    max-width:22ch;
+  }
+  .deck{margin:0 0 3px;color:#33363d}
+  .howto{margin:0;color:var(--blue);font-weight:600}
+  .rule{width:48px;height:3px;border:0;background:var(--orange);margin:9px 0 4px}
+  h2{
+    font-family:"Archivo","Inter",Arial,sans-serif;
+    font-weight:700;
+    font-size:11pt;
+    color:var(--blue);
+    letter-spacing:0.02em;
+    margin:11px 0 5px;
+    padding-bottom:3px;
+    border-bottom:1px solid var(--line);
+  }
+  ol.items{list-style:none;margin:0;padding:0}
+  ol.items li{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:9px;
+    padding:4px 0;
+    border-bottom:1px dotted rgba(23,24,28,0.14);
+  }
+  .q{margin:0}
+  .q b{font-weight:600}
+  .do{color:#3c4047}
+  .do b{color:var(--orange);font-weight:700}
+  .boxes{display:flex;gap:9px;align-items:flex-start;padding-top:2px;white-space:nowrap}
+  .box{display:inline-flex;align-items:center;gap:4px;font-size:9pt;color:#3c4047}
+  .tick{width:12px;height:12px;border:1.2px solid var(--ink);border-radius:2px;display:inline-block}
+  .scorebox{
+    margin-top:10px;
+    padding:10px 12px;
+    background:var(--cream);
+    border-left:3px solid var(--orange);
+    border-radius:2px;
+  }
+  .scorebox p{margin:0}
+  .scoreline{font-weight:700;font-size:11pt}
+  .blank{display:inline-block;width:32px;border-bottom:1.4px solid var(--ink);vertical-align:baseline}
+  .bands{margin:5px 0 0;padding:0;list-style:none}
+  .bands li{margin:2px 0}
+  .bands b{color:var(--blue)}
+  .made{margin:11px 0 0;padding-top:7px;border-top:2px solid var(--ink);font-weight:600}
+  .hint{margin:0 0 9px;font-size:9pt;color:#6b6f76}
+  @media print{
+    .page{padding:0;max-width:none}
+    .hint{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="hint">On screen: use your browser's Print, or Save as PDF, to put this on one letter page.</p>
+
+  <div class="brand">
+    <img src="images/logo.jpeg" width="268" height="268" alt="MSAII LLC logo mark" />
+    <span>MSAII LLC</span>
+  </div>
+
+  <h1>Can you tell which products made money last month?</h1>
+  <p class="deck">A five-minute self-audit for owners who keep their numbers in a point of sale export, a marketplace seller account and a spreadsheet.</p>
+  <p class="howto">Check Yes or No on each line. Yes is 1 point, No is 0. Answer from memory first, then check the two you were least sure about.</p>
+  <hr class="rule" />
+
+  <h2>1. Where your numbers live</h2>
+  <ol class="items">
+    <li>
+      <p class="q"><b>1. I can name every place my sales come in without looking it up.</b> Square, Shopify, Amazon Seller Central, Stripe, my marketplace accounts. <span class="do"><b>Do today:</b> write each one on its own line and keep that list by your desk.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>2. This month's point of sale export and marketplace report are saved in one folder.</b> <span class="do"><b>Do today:</b> make one folder called Numbers and drop this month's exports into it.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>3. Sales and costs sit next to each other in the same file.</b> <span class="do"><b>Do today:</b> add a Costs column beside Sales before this month closes.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+  </ol>
+
+  <h2>2. What your numbers can tell you</h2>
+  <ol class="items">
+    <li>
+      <p class="q"><b>4. I can name my top three products by profit for last month.</b> <span class="do"><b>Do today:</b> sort last month's export by sales, take the top ten rows, and subtract the cost of each.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>5. I can name my best and worst month this year, and say roughly why.</b> <span class="do"><b>Do today:</b> put the twelve months across one row and drop each month's total under it.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>6. My costs include the fees that eat the margin: marketplace commission, payment fees, shipping.</b> <span class="do"><b>Do today:</b> add three columns named Marketplace fee, Payment fee and Shipping.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>7. I know my margin, not just my sales.</b> <span class="do"><b>Do today:</b> margin is sales minus costs, divided by sales. Work out last month's figure now.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+  </ol>
+
+  <h2>3. The monthly rhythm</h2>
+  <ol class="items">
+    <li>
+      <p class="q"><b>8. My monthly report is ready before the next month's numbers arrive.</b> <span class="do"><b>Do today:</b> pick a fixed date, such as the fifth, and put it in your calendar.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>9. Whoever builds my report knows exactly what I need it to answer.</b> <span class="do"><b>Do today:</b> send one message: "I need my top products by profit, and my best month."</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+    <li>
+      <p class="q"><b>10. I actually read the report, because it is short.</b> <span class="do"><b>Do today:</b> ask for one page only: sales, costs, margin, top products, by month.</span></p>
+      <div class="boxes"><label class="box"><span class="tick"></span>Yes</label><label class="box"><span class="tick"></span>No</label></div>
+    </li>
+  </ol>
+
+  <div class="scorebox">
+    <p class="scoreline">Your score: <span class="blank"></span> out of 10</p>
+    <ul class="bands">
+      <li><b>8 to 10.</b> You can already see your products and your months. Keep the file clean and the date fixed.</li>
+      <li><b>4 to 7.</b> You have the pieces, but not in one place yet. Do items 3 and 7 today; they change the most.</li>
+      <li><b>0 to 3.</b> The month is being decided without you. Start with items 1 and 3: one file, sales beside costs.</li>
+    </ul>
+  </div>
+
+  <p class="made">Made by MSAII LLC - [your name], [your contact]</p>
+
+</div>
+</body>
+</html>
