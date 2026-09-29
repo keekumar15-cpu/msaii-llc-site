@@ -31,6 +31,12 @@ GitHub repository: DONE
 
 Live Vercel deploy: NOT DONE - not asked for. The member imports the repository on Vercel themselves.
 
+Free one-page self-audit (`monthly-numbers-audit.html`): DONE
+  evidence: Chrome `--print-to-pdf` on the file -> page count from the PDF is `1` (`168713 bytes`); content height 9.42in of the 10in usable on US Letter. The logo is embedded as a data URI (`external image refs: 0`, `page bytes: 27270`), the name and email are filled in, and it needs no other file to open or publish.
+
+DNS for msaii.cloud: DONE (information only)
+  evidence: `Resolve-DnsName` on `msaii.cloud`, `www.msaii.cloud`, `automation.msaii.cloud` -> apex A `147.79.72.0, 145.223.124.186`; `www` CNAME `www.msaii.cloud.cdn.hstgr.net`; `automation` A `76.13.23.117`; nameservers `orbit.dns-parking.com`, `horizon.dns-parking.com` (Hostinger).
+
 ## What broke and how I fixed it
 
 1. Screenshots looked unchanged after edits. Chrome had cached the page. Fixed by adding a `?v=` cache-busting query to every screenshot URL.
